@@ -1,0 +1,154 @@
+body {
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #121212;
+    position: absolute;
+}
+
+.navbar-icon-name {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.navbar-icon-name a {
+    transition: color 0.3s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.navbar-icon-name a:hover {
+    color: #ff9900;
+}
+
+.navbar-menu {
+    display: flex;
+}
+
+.navbar-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-menu a:hover {
+    color: #ff9900;
+}
+
+.navbar-lang {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+.navbar-lang a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navbar-lang a:hover {
+    color: #ff9900;
+}
+
+#home-section {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-section-top {
+    align-items: center;
+    display: flex;
+}
+
+.home-section-full-stack {
+    color: #ffffff;
+}
+
+.project-link a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.home-section-bottom .description-home {
+    color: #ffffff;
+}
+
+.home-section-bottom .home-section-developer {
+    color: #ffffff;
+}
+
+@media screen and (min-width: 1366px) {
+    #navbar {
+        top: 1rem;
+        right: 3rem;
+        left: 3rem;
+    }
+
+    .navbar-icon-name {
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+
+    .navbar-menu {
+        gap: 2rem;
+    }
+
+    .navbar-menu a {
+        font-size: 0.9rem;
+        margin: 0 1rem;
+    }
+
+    .navbar-lang {
+        font-size: 0.8rem;
+    }
+
+    #home-section {
+        top: 8rem;
+        right: 3rem;
+        left: 3rem;
+        width: auto;
+    }
+
+    .home-section-top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .home-section-full-stack {
+        max-width: 70%;
+        font-size: 10rem;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    .project-link {
+        display: flex;
+        min-width: 30%;
+        position: absolute;
+        right: 0;
+    }
+
+    .home-section-bottom {
+        display: flex;
+        align-items: center;
+    }
+
+    .description-home {
+        max-width: 30%;
+        flex-direction: row-reverse;
+    }
+
+    .home-section-developer {
+        max-width: 70%;
+        font-size: 10rem;
+        flex-direction: row-reverse;
+    }
+}
