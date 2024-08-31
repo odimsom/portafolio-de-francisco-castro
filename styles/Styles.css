@@ -1,3 +1,10 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+
+
 body {
     background-color: #121212;
     margin: 0;
@@ -9,7 +16,6 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #121212;
-    position: absolute;
 }
 
 .navbar-icon-name {
@@ -58,9 +64,10 @@ body {
 }
 
 #home-section {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: grid; /* Activa Flexbox */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px; /* Añade algo de espacio interior */
 }
 
 .home-section-top {
@@ -72,10 +79,33 @@ body {
     color: #ffffff;
 }
 
-.project-link a {
-    text-decoration: none;
-    color: #000000;
+.project-link {
+
 }
+.project-link a {
+    background: linear-gradient(145deg, #6a11cb, #2575fc); /* Gradiente de color */
+    border: none; /* Sin borde */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    color: white; /* Color del texto */
+    padding: 15px 30px; /* Espaciado interno para un tamaño grande */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Texto en negrita */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: all 0.3s ease; /* Transición suave en hover */
+}
+
+button a :hover {
+    transform: translateY(-3px); /* Eleva el botón cuando se pasa el cursor */
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3); /* Aumenta la sombra para un efecto más pronunciado */
+    background: linear-gradient(145deg, #2575fc, #6a11cb); /* Inversión de colores del gradiente */
+}
+
+button a :active {
+    transform: translateY(1px); /* Suaviza el efecto de presión */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Reducción de la sombra en el clic */
+}
+
 
 .home-section-bottom .description-home {
     color: #ffffff;
@@ -87,9 +117,10 @@ body {
 
 @media screen and (min-width: 1366px) {
     #navbar {
-        top: 1rem;
-        right: 3rem;
-        left: 3rem;
+        margin-top: 1rem;
+        margin-right: 3rem;
+        margin-left: 3rem;
+        width: auto;
     }
 
     .navbar-icon-name {
@@ -111,15 +142,14 @@ body {
     }
 
     #home-section {
-        top: 8rem;
-        right: 3rem;
-        left: 3rem;
+        margin-top: 8rem;
+        margin-right: 3rem;
+        margin-left: 3rem;
         width: auto;
     }
 
     .home-section-top {
         display: flex;
-        justify-content: space-between;
     }
 
     .home-section-full-stack {
@@ -132,7 +162,6 @@ body {
     .project-link {
         display: flex;
         min-width: 30%;
-        position: absolute;
         right: 0;
     }
 
@@ -151,4 +180,5 @@ body {
         font-size: 10rem;
         flex-direction: row-reverse;
     }
+}
 }
