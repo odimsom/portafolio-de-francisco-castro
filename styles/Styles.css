@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Navbar */
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #111;
+}
+
+.navbar-icon-name a, .navbar-menu a, .navbar-lang a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.navbar-menu a {
+    margin-left: 20px;
+}
+
+.navbar-lang a {
+    margin-left: 10px;
+}
+
+/* Home Section */
+#home-section {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.home-section-full-stack span {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+.project-link button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.description-home p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.home-section-developer span {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+/* About Section */
+.about-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.skills-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.skills {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.skills h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Projects Section */
+.projects-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.project {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    font-size: 1.8rem;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.project p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.project button {
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Work Section */
+.work-section {
+    padding: 50px;
+    background-color: #000;
+}
+
+.work-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.work-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: #111;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.work-item h3 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.work-item p {
+    color: #ff9800;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #111;
+    text-align: center;
+    color: #fff;
+}
