@@ -15,7 +15,7 @@ export default function Header() {
                 <nav className="hidden md:block">
                     <ul className="flex space-x-6">
                         <li><a href="#about" className="hover:text-gray-300 uppercase text-sm">About</a></li>
-                        <li><a href="#project" className="hover:text-gray-300 uppercase text-sm">Project</a></li>
+                        <li><a href="#projects" className="hover:text-gray-300 uppercase text-sm">Projects</a></li>
                         <li><a href="#skills" className="hover:text-gray-300 uppercase text-sm">Skills</a></li>
                         <li><a href="#experience" className="hover:text-gray-300 uppercase text-sm">Experience</a></li>
                         <li><a href="#articles" className="hover:text-gray-300 uppercase text-sm">Articles</a></li>
@@ -29,7 +29,7 @@ export default function Header() {
                 <div className="absolute top-20 left-0 right-0 bg-gray-950 p-4 md:hidden z-20">
                     <ul className="space-y-2">
                         <li><a href="#about" className="block hover:text-gray-300 uppercase text-sm">About</a></li>
-                        <li><a href="#project" className="block hover:text-gray-300 uppercase text-sm">Project</a></li>
+                        <li><a href="#projects" className="block hover:text-gray-300 uppercase text-sm">Projects</a></li>
                         <li><a href="#skills" className="block hover:text-gray-300 uppercase text-sm">Skills</a></li>
                         <li><a href="#experience" className="block hover:text-gray-300 uppercase text-sm">Experience</a></li>
                         <li><a href="#articles" className="block hover:text-gray-300 uppercase text-sm">Articles</a></li>

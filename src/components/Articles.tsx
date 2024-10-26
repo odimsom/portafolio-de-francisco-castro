@@ -1,36 +1,58 @@
-import React from 'react';
-import { ArrowRight, ChevronDown } from 'lucide-react';
 
-const ArticleCard: React.FC = () => (
-    <div className="bg-gray-800 rounded-lg p-6 mb-6">
-        <h3 className="text-xl font-semibold mb-2">The simplest example is kafka + golang</h3>
-        <p className="text-gray-400 mb-4">This article presents a simple way to implement a micro-service architecture using Kafka, Golang and Docker.</p>
-        <button className="bg-white text-black px-4 py-2 rounded-full flex items-center">
-            Read more
-            <ArrowRight className="ml-2 w-4 h-4" />
-        </button>
-    </div>
-);
+import Image from 'next/image'
 
-const Articles: React.FC = () => (
-    <section id="articles" className="py-10 md:py-20">
-        <h2 className="text-3xl md:text-5xl font-bold mb-6 md:mb-10">Articles</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
-            <ArticleCard />
-        </div>
-        <div className="flex justify-center mt-8">
-            <div className="flex flex-col items-center space-y-2">
-                <button className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center">1</button>
-                <button className="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center">2</button>
-                <button className="w-8 h-8 rounded-full bg-gray-800 text-white flex items-center justify-center">
-                    <ChevronDown className="w-4 h-4" />
-                </button>
+const articles = [
+    {
+        title: 'Mastering React Hooks',
+        excerpt: 'Learn how to effectively use React Hooks to manage state and side effects in your applications.',
+        imageUrl: '/path-to-article-image-1.jpg',
+        link: '#'
+    },
+    {
+        title: 'Building Scalable APIs with Node.js',
+        excerpt: 'Explore best practices for creating robust and scalable backend services using Node.js and Express.',
+        imageUrl: '/path-to-article-image-2.jpg',
+        link: '#'
+    },
+    {
+        title: 'TypeScript: Why and How',
+        excerpt: 'Discover the benefits of using TypeScript in your projects and how to get started with it.',
+        imageUrl: '/path-to-article-image-3.jpg',
+        link: '#'
+    }
+]
+
+export default function Articles() {
+    return (
+        <section id="articles" className="py-20 bg-gray-900">
+            <div className="container mx-auto px-4">
+                <h2 className="text-3xl font-bold mb-10 text-white">Latest Articles</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {articles.map((article, index) => (
+                        <div key={index} className="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+                            <Image
+                                src={article.imageUrl}
+                                alt={article.title}
+                                width={400}
+                                height={200}
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold mb-2 text-white">{article.title}</h3>
+                                <p className="text-gray-400 mb-4">{article.excerpt}</p>
+                                <a
+                                    href={article.link}
+                                    className="text-blue-400 hover:text-blue-300 transition-colors"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    Read More →
+                                </a>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
-    </section>
-);
-
-export default Articles;
+        </section>
+    )
+}
